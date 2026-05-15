@@ -90,7 +90,7 @@ export default function ResumePage() {
                   <div className="flex flex-col items-center text-center">
                     <div className="relative w-32 h-32 rounded-full overflow-hidden mb-4 border-4 border-primary/20">
                       <Image
-                        src="/images/shahzaib.jpg"
+                        src="portfolio/images/shahzaib.jpg"
                         alt="Malik Shahzaib"
                         fill
                         className="object-cover"
