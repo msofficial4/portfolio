@@ -85,7 +85,7 @@ export default function HomePage() {
               <div className="flex items-center justify-center">
                 <div className="relative w-80 h-80 rounded-full overflow-hidden border-8 border-primary/20">
                   <Image
-                    src="portfolio/images/shahzaib.jpg"
+                    src="/portfolio/images/shahzaib.jpg"
                     alt="Malik Shahzaib"
                     fill
                     className="object-cover"
@@ -116,7 +116,7 @@ export default function HomePage() {
               <div className="flex justify-center">
                 <div className="relative w-96 h-96 rounded-lg overflow-hidden">
                   <Image
-                    src="portfolio/images/shahzaib.jpg"
+                    src="/portfolio/images/shahzaib.jpg"
                     alt="About Malik Shahzaib"
                     fill
                     className="object-cover"
