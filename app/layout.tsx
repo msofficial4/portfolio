@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     shortcut: "/favicon.png",
     apple: "/apple-touch-icon.png",
   },
-  manifest: "/site.webmanifest",
+  manifest: "/portfolio/site.webmanifest",
   verification: {
     google: "HQR5EXyAbdNm39UVI2FXN5YV3xO4l-MvKrkwOtaoPmg",
   },
