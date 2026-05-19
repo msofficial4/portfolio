@@ -171,7 +171,7 @@ export default function ResumePage() {
                       <div>
                         <h3 className="font-medium">Bachelor of Science: Computer Science</h3>
                         <p className="text-sm text-muted-foreground">Virtual University of Pakistan - Lahore</p>
-                        <p className="text-sm text-primary mt-1">Expected in April 2026</p>
+                        <p className="text-sm text-primary mt-1">Expected in October 2026</p>
                       </div>
                     </div>
                   </div>
