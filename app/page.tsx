@@ -198,9 +198,25 @@ export default function HomePage() {
                   <SkillProgress name="ReactJS" level={8.2} />
                   <SkillProgress name="VueJS" level={8.0} />
                   <SkillProgress name="Git" level={8.8} />
+                  <SkillProgress name="Git Version Management" level={8.9} />
                   <SkillProgress name="REST APIs" level={9.0} />
+                  <SkillProgress name="Payment Gateway Integration" level={8.8} />
                   <SkillProgress name="Database Design" level={8.9} />
                   <SkillProgress name="Web Security" level={8.7} />
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle>Cloud & Server Administration</CardTitle>
+                  <CardDescription>Deployment, hosting, and basic infrastructure management</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <SkillProgress name="Google Cloud Services" level={8.0} />
+                  <SkillProgress name="VPS Management" level={8.4} />
+                  <SkillProgress name="Linux Basic Setup" level={8.6} />
+                  <SkillProgress name="Server Deployment" level={8.5} />
+                  <SkillProgress name="cPanel/WHM" level={8.4} />
+                  <SkillProgress name="SSL & DNS Configuration" level={8.5} />
                 </CardContent>
               </Card>
             </div>
@@ -215,9 +231,11 @@ export default function HomePage() {
                     <Badge>Problem-solving</Badge>
                     <Badge>Team collaboration</Badge>
                     <Badge>API integration</Badge>
+                    <Badge>Payment gateway integration</Badge>
                     <Badge>Software development</Badge>
                     <Badge>Product development</Badge>
                     <Badge>Object-oriented programming</Badge>
+                    <Badge>Git version management</Badge>
                     <Badge>Requirements gathering</Badge>
                     <Badge>Front-end development</Badge>
                     <Badge>Performance optimization</Badge>
@@ -228,6 +246,10 @@ export default function HomePage() {
                     <Badge>Coding standards</Badge>
                     <Badge>Back-end development</Badge>
                     <Badge>Web services integration</Badge>
+                    <Badge>Google Cloud services</Badge>
+                    <Badge>VPS management</Badge>
+                    <Badge>Linux basic setup</Badge>
+                    <Badge>Server deployment</Badge>
                     <Badge>Code optimization</Badge>
                     <Badge>Full-stack development</Badge>
                   </div>
@@ -270,6 +292,9 @@ export default function HomePage() {
                       </li>
                       <li>• Debugged complex software issues, leading to more stable product releases</li>
                       <li>• Collaborated with cross-functional teams to ensure seamless integration of new features</li>
+                      <li>• Integrated secure payment gateways and third-party services into Laravel applications</li>
+                      <li>• Managed Git workflows, branching, and deployment-ready code releases</li>
+                      <li>• Configured Linux VPS environments, DNS, SSL, and basic Google Cloud services for projects</li>
                       <li>• Reduced development time by creating reusable code libraries for future projects</li>
                     </ul>
                   </CardContent>

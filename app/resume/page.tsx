@@ -157,6 +157,11 @@ export default function ResumePage() {
                     <SkillProgress name="MySQL" level={9.1} />
                     <SkillProgress name="JavaScript" level={8.5} />
                     <SkillProgress name="HTML/CSS" level={9.0} />
+                    <SkillProgress name="Git Version Management" level={8.9} />
+                    <SkillProgress name="Payment Gateway Integration" level={8.8} />
+                    <SkillProgress name="Google Cloud Services" level={8.0} />
+                    <SkillProgress name="VPS Management" level={8.4} />
+                    <SkillProgress name="Linux Basic Setup" level={8.6} />
                   </div>
                 </CardContent>
               </Card>
@@ -186,9 +191,11 @@ export default function ResumePage() {
                     <Badge>Problem-solving</Badge>
                     <Badge>Team collaboration</Badge>
                     <Badge>API integration</Badge>
+                    <Badge>Payment gateway integration</Badge>
                     <Badge>Software development</Badge>
                     <Badge>Product development</Badge>
                     <Badge>Object-oriented programming</Badge>
+                    <Badge>Git version management</Badge>
                     <Badge>Requirements gathering</Badge>
                     <Badge>Front-end development</Badge>
                     <Badge>Performance optimization</Badge>
@@ -199,6 +206,10 @@ export default function ResumePage() {
                     <Badge>Coding standards</Badge>
                     <Badge>Back-end development</Badge>
                     <Badge>Web services integration</Badge>
+                    <Badge>Google Cloud services</Badge>
+                    <Badge>VPS management</Badge>
+                    <Badge>Linux basic setup</Badge>
+                    <Badge>Server deployment</Badge>
                     <Badge>Code optimization</Badge>
                     <Badge>Full-stack development</Badge>
                   </div>
@@ -272,6 +283,26 @@ export default function ResumePage() {
                           <span className="text-primary font-bold">•</span>
                           <span>
                             Collaborated with cross-functional teams to ensure seamless integration of new features.
+                          </span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary font-bold">•</span>
+                          <span>
+                            Integrated secure payment gateways and third-party services for e-commerce and web
+                            application workflows.
+                          </span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary font-bold">•</span>
+                          <span>
+                            Managed Git version control workflows, branch reviews, and deployment-ready code releases.
+                          </span>
+                        </li>
+                        <li className="flex gap-2">
+                          <span className="text-primary font-bold">•</span>
+                          <span>
+                            Configured Linux VPS environments, DNS, SSL, and basic Google Cloud services for client
+                            projects.
                           </span>
                         </li>
                         <li className="flex gap-2">

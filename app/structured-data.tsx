@@ -28,6 +28,11 @@ export function PersonStructuredData() {
       "CSS",
       "Web Development",
       "E-commerce Development",
+      "Payment Gateway Integration",
+      "Git Version Management",
+      "Google Cloud Services",
+      "VPS Management",
+      "Linux Server Setup",
     ],
     alumniOf: {
       "@type": "EducationalOrganization",
