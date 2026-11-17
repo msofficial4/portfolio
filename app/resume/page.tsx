@@ -21,6 +21,14 @@ import {
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 import SkillProgress from "@/components/skill-progress"
 import "./print.css" // Import the print styles
 
@@ -64,16 +72,51 @@ export default function ResumePage() {
                 Back to Portfolio
               </Link>
             </Button>
-            {/* <Button
-              size="sm"
-              onClick={() => {
-                // Trigger print dialog
-                window.print()
-              }}
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Download Resume
-            </Button> */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button size="sm">
+                  <Download className="mr-2 h-4 w-4" />
+                  Download
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle>Choose your download</DialogTitle>
+                  <DialogDescription>
+                    Download the resume by itself, include the project portfolio, or download the portfolio separately.
+                  </DialogDescription>
+                </DialogHeader>
+                <div className="grid gap-3 pt-2">
+                  <Button asChild className="h-auto justify-start px-4 py-3 text-left">
+                    <a href="/resume/malik-shahzaib-resume-and-portfolio.pdf" download="Malik-Shahzaib-Resume-and-Portfolio.pdf">
+                      <Download className="mr-3 h-5 w-5 shrink-0" />
+                      <span>
+                        <span className="block font-semibold">Resume with Portfolio</span>
+                        <span className="block text-xs font-normal opacity-80">One PDF containing both documents</span>
+                      </span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild className="h-auto justify-start px-4 py-3 text-left">
+                    <a href="/resume/malik-shahzaib-resume.pdf" download="Malik-Shahzaib-Resume.pdf">
+                      <Download className="mr-3 h-5 w-5 shrink-0" />
+                      <span>
+                        <span className="block font-semibold">Resume Only</span>
+                        <span className="block text-xs font-normal text-muted-foreground">Professional one-page resume</span>
+                      </span>
+                    </a>
+                  </Button>
+                  <Button variant="outline" asChild className="h-auto justify-start px-4 py-3 text-left">
+                    <a href="/resume/malik-shahzaib-portfolio.pdf" download="Malik-Shahzaib-Portfolio.pdf">
+                      <Briefcase className="mr-3 h-5 w-5 shrink-0" />
+                      <span>
+                        <span className="block font-semibold">Portfolio Only</span>
+                        <span className="block text-xs font-normal text-muted-foreground">Selected Laravel and WordPress work</span>
+                      </span>
+                    </a>
+                  </Button>
+                </div>
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </header>
