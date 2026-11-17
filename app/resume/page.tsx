@@ -9,6 +9,7 @@ import {
   Calendar,
   Code,
   Download,
+  ExternalLink,
   Gitlab,
   GraduationCap,
   Home,
@@ -31,6 +32,30 @@ import {
 } from "@/components/ui/dialog"
 import SkillProgress from "@/components/skill-progress"
 import "./print.css" // Import the print styles
+
+const portfolioProjects = [
+  { name: "Design Matix", url: "https://designmatix.co.uk", technology: "Custom WordPress" },
+  { name: "Design Matix Marketplace", url: "https://marketplace.designmatix.co.uk", technology: "Laravel APIs" },
+  { name: "Attenuator", url: "https://attenuator.designmatix.co.uk", technology: "Laravel APIs" },
+  { name: "Genset", url: "https://genset.designmatix.co.uk", technology: "Laravel APIs" },
+  { name: "The Yoga Tree", url: "https://theyogatree.ie", technology: "WordPress Plugin" },
+  { name: "Catalyic Technology", url: "https://catalyictechnology.com", technology: "WordPress" },
+  { name: "Mayfair EMS", url: "https://ems.mayfair.com.pk", technology: "Laravel" },
+  { name: "Nippon Paint Dost", url: "https://dost.nipponpaint.com.pk", technology: "Laravel + APIs" },
+  { name: "Complixcel", url: "https://complixcel.com", technology: "Laravel" },
+  { name: "FoxPhish", url: "https://foxphish.com", technology: "Laravel" },
+  { name: "Cornell AF", url: "https://cornellaf.com", technology: "WordPress" },
+  { name: "Exam Papers Practice", url: "https://www.exampaperspractice.co.uk", technology: "WordPress" },
+  { name: "Design Matix EMS", url: "https://ems.designmatix.co.uk", technology: "Laravel APIs" },
+  { name: "Trailer", url: "https://trailer.designmatix.co.uk", technology: "Laravel APIs" },
+  { name: "Datamatics Technologies", url: "https://datamaticstechnologies.com", technology: "WordPress" },
+  { name: "Ballachy", url: "https://ballachy.com", technology: "WordPress" },
+  { name: "ABSRS", url: "https://absrs.com", technology: "WordPress" },
+  { name: "Learn Quran Kids", url: "https://learnqurankids.com", technology: "WordPress" },
+  { name: "Premier Composites", url: "https://www.premiercomposites.co.uk", technology: "WordPress" },
+  { name: "Inspired Home Care", url: "https://www.inspiredhomecare.com", technology: "WordPress" },
+  { name: "Battery Guyz", url: "https://batteryguyz.com", technology: "WordPress" },
+]
 
 export default function ResumePage() {
   useEffect(() => {
@@ -88,7 +113,7 @@ export default function ResumePage() {
                 </DialogHeader>
                 <div className="grid gap-3 pt-2">
                   <Button asChild className="h-auto justify-start px-4 py-3 text-left">
-                    <a href="/resume/malik-shahzaib-resume-and-portfolio.pdf" download="Malik-Shahzaib-Resume-and-Portfolio.pdf">
+                    <a href="./malik-shahzaib-resume-and-portfolio.pdf" download="Malik-Shahzaib-Resume-and-Portfolio.pdf">
                       <Download className="mr-3 h-5 w-5 shrink-0" />
                       <span>
                         <span className="block font-semibold">Resume with Portfolio</span>
@@ -97,7 +122,7 @@ export default function ResumePage() {
                     </a>
                   </Button>
                   <Button variant="outline" asChild className="h-auto justify-start px-4 py-3 text-left">
-                    <a href="/resume/malik-shahzaib-resume.pdf" download="Malik-Shahzaib-Resume.pdf">
+                    <a href="./malik-shahzaib-resume.pdf" download="Malik-Shahzaib-Resume.pdf">
                       <Download className="mr-3 h-5 w-5 shrink-0" />
                       <span>
                         <span className="block font-semibold">Resume Only</span>
@@ -106,7 +131,7 @@ export default function ResumePage() {
                     </a>
                   </Button>
                   <Button variant="outline" asChild className="h-auto justify-start px-4 py-3 text-left">
-                    <a href="/resume/malik-shahzaib-portfolio.pdf" download="Malik-Shahzaib-Portfolio.pdf">
+                    <a href="./malik-shahzaib-portfolio.pdf" download="Malik-Shahzaib-Portfolio.pdf">
                       <Briefcase className="mr-3 h-5 w-5 shrink-0" />
                       <span>
                         <span className="block font-semibold">Portfolio Only</span>
@@ -482,6 +507,41 @@ export default function ResumePage() {
               </Card>
             </div>
           </div>
+
+          <section className="mt-12 no-print" aria-labelledby="portfolio-heading">
+            <div className="mb-8 text-center">
+              <Badge variant="secondary" className="mb-3">Selected Work</Badge>
+              <h2 id="portfolio-heading" className="text-3xl font-bold tracking-tight">Web Development Portfolio</h2>
+              <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
+                Production projects delivered across Laravel applications, API integrations, custom WordPress
+                development, plugins, and e-commerce platforms.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {portfolioProjects.map((project) => (
+                <Card key={project.url} className="group transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-md">
+                  <CardContent className="flex h-full flex-col p-5">
+                    <div className="mb-4 flex items-start justify-between gap-3">
+                      <div>
+                        <h3 className="font-semibold leading-tight">{project.name}</h3>
+                        <Badge variant="outline" className="mt-2">{project.technology}</Badge>
+                      </div>
+                      <ExternalLink className="h-4 w-4 shrink-0 text-muted-foreground transition-colors group-hover:text-primary" />
+                    </div>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto break-all text-sm text-primary hover:underline"
+                      aria-label={`Visit ${project.name}`}
+                    >
+                      {project.url.replace("https://", "")}
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
         </div>
       </main>
 
